@@ -36,7 +36,6 @@ int main() {
 }
 /* Write all the test functions */
 void test_do_abcanalysis {
-  CU_ASSERT_EQUAL("The item is under A\n",abcanalysis(7000));
-
+  CU_ASSERT_EQUAL("The item is under A\nEssential\nhigh success rate\n",abcanalysis(7000,70,7));
   /* Dummy fail*/
 }
