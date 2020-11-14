@@ -1,19 +1,37 @@
 #include <stdio.h>
+#include<string.h>
 void abc_analysis(int value,int number,int points){
+	char value_output[50];
+	char number_output[50];
+	char points_output[50];
+	char output_final[200];
 	if (value >= 6000)
-		printf ("The item is under A\n");
+		strcpy(value_output,"The item is under A\n");
+		
 	else if (value < 6000 && value >= 3000)
-		printf ("The item is under B\n");
+		strcpy(value_output,"The item is under B\n");
+
 	else
-		printf ("The value is under C\n");
+		strcpy(value_output,"The value is under C\n");
+
 	if (number >= 100)
-		printf ("vital\n");
+		strcpy(number_output, "vital\n");
 	else if (number < 100 && number >= 20)
-		printf ("Essential\n");
+		strcpy(number_output,"Essential\n");
 	else
-		printf ("desirable\n");
+		strcpy(number_output,"desirable\n");
 	if(points<=10&&points>=6)
-		printf("high success rate\n");
+		strcpy(points_output,"high success rate\n");
 	else
-		printf("low success rate change the plan\n");
+		strcpy(points_output,"low success rate change the plan\n");
+
+	strcat(output_final,value_output);
+
+	strcat(output_final,number_output);
+
+	strcat(output_final,points_output);
+
+	 /* Display the concatenated strings */
+   	printf("%s", output_final);
+
 }
